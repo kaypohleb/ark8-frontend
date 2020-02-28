@@ -1,0 +1,19 @@
+{
+  "name": "ark8-frontend",
+  "version": "1.0.0",
+  "description": "frontend of party game platform using flutter\r <!DOCTYPE html>\r <html>\r <head>\r   <meta charset=\"UTF-8\">\r   <meta content=\"IE=Edge\" http-equiv=\"X-UA-Compatible\">\r   <meta name=\"description\" content=\"A new Flutter project.\">\r   <meta name=\"google-signin-client_id\" content=\"847513414205-5nedtsld2ss56envd7ocoa4evb2ikrng.apps.googleusercontent.com\">\r   <!-- iOS meta tags & icons -->\r   <meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\r   <meta name=\"apple-mobile-web-status-bar-style\" content=\"black\">\r   <meta name=\"apple-mobile-web-app-title\" content=\"frontend\">\r   <link rel=\"apple-touch-icon\" href=\"/icons/Icon-192.png\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaypohleb/ark8-frontend.git"
+  },
+  "author": "Caleb Foo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaypohleb/ark8-frontend/issues"
+  },
+  "homepage": "https://github.com/kaypohleb/ark8-frontend#readme"
+}

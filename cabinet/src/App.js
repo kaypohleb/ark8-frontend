@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
+import UncontrolledLottie from './components/UncontrolledLottie';
 firebase.initializeApp({
   apiKey:"AIzaSyDAqWHBVCQhSMXGopU-U_IAKwjO7lt-LFs",
   authDomain:"ark8-cabinet.firebaseapp.com",
@@ -19,7 +19,7 @@ class App extends Component{
       firebase.auth.EmailAuthProvider.PROVIDER_ID
     ],
     callbacks:{
-      signInSuccess: () => false
+      signInSuccessWithAuthResult: () => false
     }
   }
 
@@ -28,7 +28,8 @@ class App extends Component{
     firebase.auth().onAuthStateChanged(user=>{
       this.setState({isSignedIn:!!user})
       console.log("user",user);
-      console.log("IDtoken",user.getIdToken())
+      console.log("IDtoken",user.getIdToken());
+      console.log("PhotoURL",user.photoURL);
     })
     
 
@@ -41,13 +42,16 @@ class App extends Component{
           <div>Signed In!</div>
         <button onClick={()=>firebase.auth().signOut()}>Sign Out!</button>
         <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
+        <img src={firebase.auth().currentUser.photoURL} alt="profile"/>
         </span>
-        
         :(
+        <span>
+          <UncontrolledLottie/>
       <StyledFirebaseAuth
         uiConfig={this.uiConfig}
         firebaseAuth = {firebase.auth()}
         />
+        </span>
         )}
         
       </div>
